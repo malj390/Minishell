@@ -1,0 +1,111 @@
+export _MSDIR=$PWD
+[?2004l[?2004hbash$> echo "red" > colors.txt
+[?2004l[?2004hbash$> echo "green" >> colors.txt
+[?2004l[?2004hbash$> echo "blue" >> colors.txt
+[?2004l[?2004hbash$> echo "yellow" >> colors.txt
+[?2004l[?2004hbash$> echo hello
+[?2004lhello
+[?2004hbash$> echo -n noeol
+[?2004lnoeol[?2004hbash$> echo -n
+[?2004l[?2004hbash$> echo hello world
+[?2004lhello world
+[?2004hbash$> echo ""
+[?2004l
+[?2004hbash$> echo "  spaces  "
+[?2004l  spaces  
+[?2004hbash$> echo -n one -n two
+[?2004lone -n two[?2004hbash$> echo one two   three
+[?2004lone two three
+[?2004hbash$> echo 
+[?2004l
+[?2004hbash$> echo "" hola
+[?2004l hola
+[?2004hbash$> echo -n -n hola
+[?2004lhola[?2004hbash$> echo -n -nh -n hola
+[?2004l-nh -n hola[?2004hbash$> echo -nnnnnnnnn hola
+[?2004lhola[?2004hbash$> echo 'echo "hola'
+[?2004lecho "hola
+[?2004hbash$> echo $?hcudshfuewrf ew  wr 4ew""""
+[?2004l0hcudshfuewrf ew wr 4ew
+[?2004hbash$> echo ""uhjkhnkj"hjbmb"'''' defdjhfkjb "iujiouhj"f'f'f'f'f''f'f'f'f'f'f'
+[?2004luhjkhnkjhjbmb defdjhfkjb iujiouhjfffffffffff
+[?2004hbash$> echo ""uhjkhnkj"hjbmb"'''' defdjhfkjb "iujiouhj"f'f'a'j'o''i'w'q''q
+[?2004luhjkhnkjhjbmb defdjhfkjb iujiouhjffajoiwqq
+[?2004hbash$> echo ""aaaaaaaa"bbbbb"'''' ccccccccc "dddddddd"e'e'e
+[?2004laaaaaaaabbbbb ccccccccc ddddddddeee
+[?2004hbash$> echo "ho   $USER"  'la   $LESS'   $USER$TERM
+[?2004lho   malj la   $LESS maljxterm-256color
+[?2004hbash$> echo "ho   $USER"'la   $LESS'$USER$TERM
+[?2004lho   maljla   $LESSmaljxterm-256color
+[?2004hbash$> echo"ho   $USER"
+[?2004lbash: echoho   malj: command not found
+[?2004hbash$> echo"ho   $USE$LESS"
+[?2004lbash: echoho   : command not found
+[?2004hbash$> "echo" "ho   $USER"
+[?2004lho   malj
+[?2004hbash$> e"cho" "ho   $USER"
+[?2004lho   malj
+[?2004hbash$>        echo "ho   $USER"
+[?2004lho   malj
+[?2004hbash$> echo "$HOME '$LESS' $USER"
+[?2004l/home/malj '' malj
+[?2004hbash$> echo '$HOME "$LESS" $USER'
+[?2004l$HOME "$LESS" $USER
+[?2004hbash$> echo '$'"HOME"
+[?2004l$HOME
+[?2004hbash$> 
+[?2004l[?2004hbash$> pwd
+[?2004l/home/malj/00_Github/000_42Repos/Current/003_08_Minishell-dev/Minishell/tester
+[?2004hbash$> cd /tmp
+[?2004l[?2004hbash$> pwd
+[?2004l/tmp
+[?2004hbash$> cd /
+[?2004l[?2004hbash$> pwd
+[?2004l/
+[?2004hbash$> cd /usr/bin
+[?2004l[?2004hbash$> pwd
+[?2004l/usr/bin
+[?2004hbash$> cd ..
+[?2004l[?2004hbash$> pwd
+[?2004l/usr
+[?2004hbash$> cd .
+[?2004l[?2004hbash$> pwd
+[?2004l/usr
+[?2004hbash$> cd /nonexistent_directory_xyz
+[?2004lbash: cd: /nonexistent_directory_xyz: No such file or directory
+[?2004hbash$> echo $?
+[?2004l1
+[?2004hbash$> cd $_MSDIR
+[?2004l[?2004hbash$> export _SAVED_HOME=$HOME
+[?2004l[?2004hbash$> unset HOME
+[?2004l[?2004hbash$> cd
+[?2004lbash: cd: HOME not set
+[?2004hbash$> echo $?
+[?2004l1
+[?2004hbash$> export HOME=$_SAVED_HOME
+[?2004l[?2004hbash$> unset _SAVED_HOME
+[?2004l[?2004hbash$> cd $_MSDIR
+[?2004l[?2004hbash$> cd -
+[?2004l/home/malj/00_Github/000_42Repos/Current/003_08_Minishell-dev/Minishell/tester
+[?2004hbash$> pwd
+[?2004l/home/malj/00_Github/000_42Repos/Current/003_08_Minishell-dev/Minishell/tester
+[?2004hbash$> cd ~
+[?2004l[?2004hbash$> pwd
+[?2004l/home/malj
+[?2004hbash$> cd $_MSDIR
+[?2004l[?2004hbash$> 
+[?2004l[?2004hbash$> echo '$USER'
+[?2004l$USER
+[?2004hbash$> echo '$?'
+[?2004l$?
+[?2004hbash$> echo 'hello world'
+[?2004lhello world
+[?2004hbash$> echo ''
+[?2004l
+[?2004hbash$> echo 'no | pipe here'
+[?2004lno | pipe here
+[?2004hbash$> echo 'no > redirect'
+[?2004lno > redirect
+[?2004hbash$> echo 'spaces   preserved'
+[?2004lspaces   preserved
+[?2004hbash$> 
